@@ -59,7 +59,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'core.wsgi.application'  # ✅ FIXED FROM 'backend.wsgi.application'
+WSGI_APPLICATION = 'core.wsgi.application'
+
 
 # Database configuration
 DATABASES = {
