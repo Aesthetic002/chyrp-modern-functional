@@ -119,7 +119,7 @@ REST_FRAMEWORK = {
 # CORS settings for frontend connection
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # Keep for development
-    "https://yourapp.vercel.app",  # Update with your actual Vercel URL
+    "https://chyrp-modern-functional.vercel.app",  # Update with your actual Vercel URL
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True  # Temporary for initial deployment - remove after testing
