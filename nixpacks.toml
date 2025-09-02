@@ -1,20 +1,16 @@
 [phases.setup]
-nixPkgs = ["python312", "postgresql_16"]
+nixPkgs = ['...', 'python311']
 
 [phases.install]
 cmds = [
-  "cd backend",
-  "python -m venv venv",
-  ". venv/bin/activate", 
-  "pip install -r requirements.txt"
+    'python -m pip install --upgrade pip',
+    'pip install -r requirements.txt'
 ]
 
 [phases.build]
 cmds = [
-  "cd backend",
-  ". venv/bin/activate",
-  "python manage.py collectstatic --noinput"
+    'python manage.py collectstatic --noinput'
 ]
 
 [start]
-cmd = "cd backend && . venv/bin/activate && python manage.py migrate && gunicorn core.wsgi:application --bind 0.0.0.0:$PORT"
+cmd = 'python manage.py migrate && gunicorn --bind 0.0.0.0:$PORT core.wsgi:application'
